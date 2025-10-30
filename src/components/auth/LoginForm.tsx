@@ -4,11 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
-interface LoginFormProps {
-  onSwitchToSignup: () => void;
-}
-
-const LoginForm = ({ onSwitchToSignup }: LoginFormProps) => {
+const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -57,17 +53,6 @@ const LoginForm = ({ onSwitchToSignup }: LoginFormProps) => {
       <Button type="submit" className="w-full" disabled={isLoading}>
         {isLoading ? "Iniciando sesión..." : "Iniciar sesión"}
       </Button>
-
-      <div className="text-center text-sm text-muted-foreground">
-        ¿No tienes cuenta?{" "}
-        <button
-          type="button"
-          onClick={onSwitchToSignup}
-          className="text-foreground font-medium hover:underline"
-        >
-          Regístrate
-        </button>
-      </div>
     </form>
   );
 };

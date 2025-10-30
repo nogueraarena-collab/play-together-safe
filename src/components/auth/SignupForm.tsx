@@ -5,11 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
-interface SignupFormProps {
-  onSwitchToLogin: () => void;
-}
-
-const SignupForm = ({ onSwitchToLogin }: SignupFormProps) => {
+const SignupForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -110,7 +106,7 @@ const SignupForm = ({ onSwitchToLogin }: SignupFormProps) => {
         <Input
           id="email"
           type="email"
-          placeholder="tu@email.com"
+          placeholder="ejemplo@email.com"
           value={formData.email}
           onChange={(e) => handleChange("email", e.target.value)}
           required
@@ -122,7 +118,7 @@ const SignupForm = ({ onSwitchToLogin }: SignupFormProps) => {
         <Input
           id="phone"
           type="tel"
-          placeholder="+57 300 123 4567"
+          placeholder="+1 234 567 8900"
           value={formData.phone}
           onChange={(e) => handleChange("phone", e.target.value)}
           required
@@ -134,7 +130,7 @@ const SignupForm = ({ onSwitchToLogin }: SignupFormProps) => {
           <Label htmlFor="country">País</Label>
           <Input
             id="country"
-            placeholder="Colombia"
+            placeholder="Tu país"
             value={formData.country}
             onChange={(e) => handleChange("country", e.target.value)}
             required
@@ -145,7 +141,7 @@ const SignupForm = ({ onSwitchToLogin }: SignupFormProps) => {
           <Label htmlFor="city">Ciudad</Label>
           <Input
             id="city"
-            placeholder="Bogotá"
+            placeholder="Tu ciudad"
             value={formData.city}
             onChange={(e) => handleChange("city", e.target.value)}
             required
@@ -180,17 +176,6 @@ const SignupForm = ({ onSwitchToLogin }: SignupFormProps) => {
       <Button type="submit" className="w-full" disabled={isLoading}>
         {isLoading ? "Creando cuenta..." : "Crear cuenta"}
       </Button>
-
-      <div className="text-center text-sm text-muted-foreground">
-        ¿Ya tienes cuenta?{" "}
-        <button
-          type="button"
-          onClick={onSwitchToLogin}
-          className="text-foreground font-medium hover:underline"
-        >
-          Inicia sesión
-        </button>
-      </div>
     </form>
   );
 };

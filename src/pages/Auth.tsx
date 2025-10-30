@@ -13,7 +13,7 @@ const Auth = () => {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="bg-foreground text-background px-6 py-3 rounded-lg font-bold text-xl">
-            SportConnect
+            LOGO
           </div>
         </div>
 
@@ -34,11 +34,11 @@ const Auth = () => {
               </TabsList>
               
               <TabsContent value="login">
-                <LoginForm onSwitchToSignup={() => setActiveTab("signup")} />
+                <LoginForm />
               </TabsContent>
               
               <TabsContent value="signup">
-                <SignupForm onSwitchToLogin={() => setActiveTab("login")} />
+                <SignupForm />
               </TabsContent>
             </Tabs>
           </CardContent>
