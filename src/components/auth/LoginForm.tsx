@@ -17,8 +17,8 @@ const LoginForm = () => {
     // TODO: Implement actual authentication
     setTimeout(() => {
       toast({
-        title: "Funcionalidad pendiente",
-        description: "La autenticación se implementará con Lovable Cloud",
+        title: "Funcionalidad en desarrollo",
+        description: "El sistema de autenticación estará disponible próximamente",
       });
       setIsLoading(false);
     }, 1000);

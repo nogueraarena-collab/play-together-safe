@@ -42,8 +42,8 @@ const SignupForm = () => {
     // TODO: Implement actual registration
     setTimeout(() => {
       toast({
-        title: "Funcionalidad pendiente",
-        description: "El registro se implementará con Lovable Cloud",
+        title: "Funcionalidad en desarrollo",
+        description: "El registro de nuevos usuarios estará disponible próximamente",
       });
       setIsLoading(false);
     }, 1000);
